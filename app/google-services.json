@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "845838418286",
+    "firebase_url": "https://mimchat-a69fc-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "mimchat-a69fc",
+    "storage_bucket": "mimchat-a69fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845838418286:android:5221ca019d835741dc417f",
+        "android_client_info": {
+          "package_name": "com.example.mim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845838418286-9467n451bldndb79dlj99b0nbj89rhjq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mim",
+            "certificate_hash": "c3859e8f9ce498cf41328bf569b5966746568163"
+          }
+        },
+        {
+          "client_id": "845838418286-phu4aj6j4it84129e5mcqkhjkfb0rom0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4S_jAN6lC3Sr-fb5oUI_33tFNJaHyfNo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845838418286-phu4aj6j4it84129e5mcqkhjkfb0rom0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

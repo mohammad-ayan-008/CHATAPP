@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:orientation="vertical"
+     android:id="@+id/coordinator">
+
+    <com.google.android.material.appbar.AppBarLayout
+         android:layout_height="136dp"
+         android:layout_width="match_parent"
+         android:background="#006A63"
+         android:layout_weight="1">
+
+        <com.google.android.material.appbar.MaterialToolbar
+             android:layout_height="50dp"
+             android:layout_width="match_parent"
+             
+             android:id="@+id/MToolbar" >
+        <LinearLayout
+               android:orientation="horizontal"
+               android:layout_height="50dp"
+               android:layout_width="match_parent"
+                >
+           <ImageView
+             android:layout_height="50dp"
+             android:layout_width="40dp"
+             android:layout_margin="5dp"        
+             android:layout_gravity="right" 
+             android:id="@+id/IMG" 
+             />
+           <TextView 
+             android:layout_margin="5dp"      
+             android:layout_height="50dp"
+             android:textColor="@color/white"       
+             android:layout_width="match_parent"
+             android:id="@+id/Text"        
+             />      
+         </LinearLayout>   
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:layout_weight="1"
+         android:id="@+id/Recycleraview" />
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:orientation="horizontal"
+         android:layout_gravity="bottom">
+
+        <EditText
+             android:layout_height="40dp"
+             android:layout_width="100dp"
+             android:background="@drawable/reciever"
+             android:layout_weight="1"
+             android:hint="Say Something..."
+             android:id="@+id/Message" />
+
+        <com.google.android.material.button.MaterialButton
+             android:layout_height="40dp"
+             android:layout_width="40dp"
+             android:layout_weight="1"
+             android:id="@+id/Send"
+             android:text="send" />
+
+        <com.google.android.material.button.MaterialButton
+             android:layout_height="40dp"
+             android:layout_width="40dp"
+             android:layout_weight="1"
+             android:id="@+id/Img"
+             android:text="Image" />
+
+    </LinearLayout>
+
+</LinearLayout>

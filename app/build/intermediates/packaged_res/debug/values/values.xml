@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="md_theme_dark_background">#00210E</color>
+    <color name="md_theme_dark_error">#FFB4AB</color>
+    <color name="md_theme_dark_errorContainer">#93000A</color>
+    <color name="md_theme_dark_inverseOnSurface">#00210E</color>
+    <color name="md_theme_dark_inversePrimary">#006A63</color>
+    <color name="md_theme_dark_inverseSurface">#99F7B5</color>
+    <color name="md_theme_dark_onBackground">#99F7B5</color>
+    <color name="md_theme_dark_onError">#690005</color>
+    <color name="md_theme_dark_onErrorContainer">#FFDAD6</color>
+    <color name="md_theme_dark_onPrimary">#003733</color>
+    <color name="md_theme_dark_onPrimaryContainer">#72F7EB</color>
+    <color name="md_theme_dark_onSecondary">#003823</color>
+    <color name="md_theme_dark_onSecondaryContainer">#8EF7C0</color>
+    <color name="md_theme_dark_onSurface">#99F7B5</color>
+    <color name="md_theme_dark_onSurfaceVariant">#BEC9C6</color>
+    <color name="md_theme_dark_onTertiary">#003919</color>
+    <color name="md_theme_dark_onTertiaryContainer">#9CF6B1</color>
+    <color name="md_theme_dark_outline">#899391</color>
+    <color name="md_theme_dark_outlineVariant">#3F4947</color>
+    <color name="md_theme_dark_primary">#50DBCF</color>
+    <color name="md_theme_dark_primaryContainer">#00504A</color>
+    <color name="md_theme_dark_scrim">#000000</color>
+    <color name="md_theme_dark_secondary">#72DAA5</color>
+    <color name="md_theme_dark_secondaryContainer">#005234</color>
+    <color name="md_theme_dark_shadow">#000000</color>
+    <color name="md_theme_dark_surface">#00210E</color>
+    <color name="md_theme_dark_surfaceTint">#50DBCF</color>
+    <color name="md_theme_dark_surfaceVariant">#3F4947</color>
+    <color name="md_theme_dark_tertiary">#81D997</color>
+    <color name="md_theme_dark_tertiaryContainer">#005227</color>
+    <color name="md_theme_light_background">#F5FFF3</color>
+    <color name="md_theme_light_error">#BA1A1A</color>
+    <color name="md_theme_light_errorContainer">#FFDAD6</color>
+    <color name="md_theme_light_inverseOnSurface">#C2FFD0</color>
+    <color name="md_theme_light_inversePrimary">#50DBCF</color>
+    <color name="md_theme_light_inverseSurface">#00391C</color>
+    <color name="md_theme_light_onBackground">#00210E</color>
+    <color name="md_theme_light_onError">#FFFFFF</color>
+    <color name="md_theme_light_onErrorContainer">#410002</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_onPrimaryContainer">#00201D</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_onSecondaryContainer">#002112</color>
+    <color name="md_theme_light_onSurface">#00210E</color>
+    <color name="md_theme_light_onSurfaceVariant">#3F4947</color>
+    <color name="md_theme_light_onTertiary">#FFFFFF</color>
+    <color name="md_theme_light_onTertiaryContainer">#00210C</color>
+    <color name="md_theme_light_outline">#6F7977</color>
+    <color name="md_theme_light_outlineVariant">#BEC9C6</color>
+    <color name="md_theme_light_primary">#006A63</color>
+    <color name="md_theme_light_primaryContainer">#72F7EB</color>
+    <color name="md_theme_light_scrim">#000000</color>
+    <color name="md_theme_light_secondary">#006C46</color>
+    <color name="md_theme_light_secondaryContainer">#8EF7C0</color>
+    <color name="md_theme_light_shadow">#000000</color>
+    <color name="md_theme_light_surface">#F5FFF3</color>
+    <color name="md_theme_light_surfaceTint">#006A63</color>
+    <color name="md_theme_light_surfaceVariant">#DAE5E2</color>
+    <color name="md_theme_light_tertiary">#066D37</color>
+    <color name="md_theme_light_tertiaryContainer">#9CF6B1</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="seed">#006a63</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Mim</string>
+    <string name="default_web_client_id" translatable="false">845838418286-phu4aj6j4it84129e5mcqkhjkfb0rom0.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://mimchat-a69fc-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+    <string name="gcm_defaultSenderId" translatable="false">845838418286</string>
+    <string name="google_api_key" translatable="false">AIzaSyC4S_jAN6lC3Sr-fb5oUI_33tFNJaHyfNo</string>
+    <string name="google_app_id" translatable="false">1:845838418286:android:5221ca019d835741dc417f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC4S_jAN6lC3Sr-fb5oUI_33tFNJaHyfNo</string>
+    <string name="google_storage_bucket" translatable="false">mimchat-a69fc.appspot.com</string>
+    <string name="project_id" translatable="false">mimchat-a69fc</string>
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/md_theme_light_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_light_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/md_theme_light_tertiary</item>
+        <item name="colorOnTertiary">@color/md_theme_light_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/md_theme_light_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/md_theme_light_onTertiaryContainer</item>
+        <item name="colorError">@color/md_theme_light_error</item>
+        <item name="colorErrorContainer">@color/md_theme_light_errorContainer</item>
+        <item name="colorOnError">@color/md_theme_light_onError</item>
+        <item name="colorOnErrorContainer">@color/md_theme_light_onErrorContainer</item>
+        <item name="android:colorBackground">@color/md_theme_light_background</item>
+        <item name="colorOnBackground">@color/md_theme_light_onBackground</item>
+        <item name="colorSurface">@color/md_theme_light_surface</item>
+        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_light_onSurfaceVariant</item>
+        <item name="colorOutline">@color/md_theme_light_outline</item>
+        <item name="colorOnSurfaceInverse">@color/md_theme_light_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/md_theme_light_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/md_theme_light_inversePrimary</item>
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+</resources>
