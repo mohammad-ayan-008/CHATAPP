@@ -1,5 +1,6 @@
 package com.example.mim;
 
+import android.app.Notification;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -15,8 +16,12 @@ import com.bumptech.glide.request.target.SizeReadyCallback;
 import com.bumptech.glide.request.target.CustomTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.example.Holders.Messages;
+import com.example.Holders.NotificationModel;
+import com.example.Holders.RootModel;
 import com.example.RecyclerAdapters.chatAdapter;
 import com.example.mim.databinding.LayoutChatlayoutBinding;
+import com.example.retrofitsApI.ApiClient;
+import com.example.retrofitsApI.ApiInterface;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -29,6 +34,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.UploadTask;
+import com.itsaky.androidide.logsender.LogSender;
 import java.util.ArrayList;
 
 public class Chatlayout extends AppCompatActivity {
@@ -41,12 +47,12 @@ public class Chatlayout extends AppCompatActivity {
     private ArrayList<Messages> list = new ArrayList<>();
     private Uri image;
     private MaterialToolbar tb;
-    private String Profile,Name,BIO;
-
+    private String Profile,Name,BIO,FMC;
     @Override
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
         // TODO: Implement this method
+        LogSender.startLogging(this);
         auth = FirebaseAuth.getInstance();
         MyUID = auth.getCurrentUser().getUid();
         reff = FirebaseDatabase.getInstance().getReference("Chats");
@@ -63,6 +69,8 @@ public class Chatlayout extends AppCompatActivity {
             Profile = getIntent().getExtras().getString("IMG");
             Name = getIntent().getExtras().getString("NAME");
             BIO = getIntent().getExtras().getString("BIO");
+            FMC = getIntent().getExtras().getString("FMC");
+            
         } catch (Exception e) {
 
         }
@@ -136,6 +144,7 @@ public class Chatlayout extends AppCompatActivity {
                 .addOnSuccessListener(
                         (Void v) -> {
                             binding.Message.setText("");
+                            ApiClient.getClient().create(ApiInterface.class).sendNotification(new RootModel(FMC,new NotificationModel("New Message from"+FirebaseAuth.getInstance().getCurrentUser().getDisplayName(),Text+"....")));
                         });
     }
 

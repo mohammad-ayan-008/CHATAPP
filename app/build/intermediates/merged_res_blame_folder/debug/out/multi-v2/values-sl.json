@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mim.app-mergeDebugResources-30:/values-sl/values-sl.xml",
+            "outputFile": "com.example.mim.app-mergeDebugResources-31:/values-sl/values-sl.xml",
             "map": [
                 {
                     "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/d97aaa3d93c46ff8574afb54842f5d4b/transformed/appcompat-1.4.2/res/values-sl/values-sl.xml",

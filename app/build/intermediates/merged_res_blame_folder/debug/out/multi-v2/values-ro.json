@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mim.app-mergeDebugResources-30:/values-ro/values-ro.xml",
+            "outputFile": "com.example.mim.app-mergeDebugResources-31:/values-ro/values-ro.xml",
             "map": [
                 {
                     "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/d11adf8556439d0c92bade09281f4069/transformed/play-services-base-18.1.0/res/values-ro/values.xml",

@@ -1,7 +1,7 @@
 package com.example.Holders;
 
 public class User {
-    private String Name, Pass, Email, UID, Status, ProfileURL, bio;
+    private String Name, Pass, Email, UID, Status, ProfileURL, bio, FMCToken;
 
     public User(
             String Name,
@@ -10,9 +10,9 @@ public class User {
             String UID,
             String Status,
             String ProfileURL,
-            String bio) {
-        
-        
+            String bio,
+            String FMCToken) {
+
         this.Name = Name;
         this.Pass = Pass;
         this.Email = Email;
@@ -20,7 +20,7 @@ public class User {
         this.Status = Status;
         this.ProfileURL = ProfileURL;
         this.bio = bio;
-        
+        this.FMCToken = FMCToken;
     }
 
     public User() {}
@@ -79,5 +79,13 @@ public class User {
 
     public void setBio(String bio) {
         this.bio = bio;
+    }
+
+    public String getFMCToken() {
+        return this.FMCToken;
+    }
+
+    public void setFMCToken(String FMCToken) {
+        this.FMCToken = FMCToken;
     }
 }

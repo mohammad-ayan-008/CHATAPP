@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mim.app-mergeDebugResources-30:/values-ky/values-ky.xml",
+            "outputFile": "com.example.mim.app-mergeDebugResources-31:/values-ky/values-ky.xml",
             "map": [
                 {
                     "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/468795019ec08100732a3a9645520ed1/transformed/play-services-basement-18.1.0/res/values-ky/values.xml",

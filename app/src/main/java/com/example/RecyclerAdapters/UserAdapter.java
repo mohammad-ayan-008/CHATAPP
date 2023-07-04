@@ -40,6 +40,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.Holder> {
             i.putExtra("IMG",list.get(getAdapterPosition()).getProfileURL());
             i.putExtra("NAME",list.get(getAdapterPosition()).getName());
             i.putExtra("BIO",list.get(getAdapterPosition()).getBio());
+            i.putExtra("FMC",list.get(getAdapterPosition()).getFMCToken());
             context.startActivity(i);
         }
     }

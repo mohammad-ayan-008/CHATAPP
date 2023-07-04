@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mim.app-mergeDebugResources-30:/values-az/values-az.xml",
+            "outputFile": "com.example.mim.app-mergeDebugResources-31:/values-az/values-az.xml",
             "map": [
                 {
                     "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/815e8a1eafc3e6e80fd3c5d0bb910978/transformed/material-1.6.1/res/values-az/values-az.xml",

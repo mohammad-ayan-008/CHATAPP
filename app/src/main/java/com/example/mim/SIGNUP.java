@@ -1,4 +1,7 @@
 package com.example.mim;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,6 +10,7 @@ import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 import com.example.Holders.User;
 import com.example.mim.databinding.LayoutSignUpBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,6 +22,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -33,6 +38,8 @@ public class SIGNUP extends AppCompatActivity {
     private String Profile_Image="default";
     private StorageReference storage;
     private Uri image;
+    private NotificationManager nmanager;
+    private NotificationCompat.Builder compact;
     @Override
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
@@ -43,6 +50,7 @@ public class SIGNUP extends AppCompatActivity {
         Name = binding.SName;
         pass = binding.SPass;
         Email = binding.SEmail;
+        nmanager=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
         auth = FirebaseAuth.getInstance();
         reff=  FirebaseDatabase.getInstance().getReference("Users");
         binding.SignUP.setOnClickListener(
@@ -80,15 +88,31 @@ public class SIGNUP extends AppCompatActivity {
                             @Override
                             public void onComplete(Task<AuthResult> arg0) {
                                  if(arg0.isSuccessful()){
-                                         storage.child(FirebaseAuth.getInstance().getCurrentUser().getUid()+"."+MimeTypeMap.getSingleton().getExtensionFromMimeType(getContentResolver().getType(image))).putFile(image).addOnSuccessListener((UploadTask.TaskSnapshot s)->{
-                                              s.getMetadata().getReference().getDownloadUrl().addOnSuccessListener((Uri v)->{
+                                         storage.child(FirebaseAuth.getInstance().getCurrentUser().getUid()+"."+MimeTypeMap.getSingleton().getExtensionFromMimeType(getContentResolver().getType(image))).putFile(image)
+                                            .addOnProgressListener((UploadTask.TaskSnapshot arg)->{
+                                              
+                                              double progress = 100* (arg.getBytesTransferred()/arg.getTotalByteCount());
+                                              if(arg.getBytesTransferred()==arg.getTotalByteCount()){
+                                                compact.setProgress(100,(int)progress, false);
+                                                nmanager.notify(100,compact.build()); 
+                                              }else{
+                                                compact.setProgress(100,(int)progress, false);
+                                                compact.setOngoing(false);
+                                                nmanager.notify(100,compact.build()); 
+                                              } 
+                                            })
+                                             .addOnSuccessListener((UploadTask.TaskSnapshot s)->{
+                                             s.getMetadata().getReference().getDownloadUrl().addOnSuccessListener((Uri v)->{
                                               Profile_Image = v.toString(); 
-                                              User user = new User(name,pass,email,auth.getCurrentUser().getUid(),status,Profile_Image,"Heyy i am using Mim");
-                                              reff.child(auth.getCurrentUser().getUid()).setValue(user).addOnSuccessListener((Void m)->{
+                                              FirebaseMessaging.getInstance().getToken().addOnSuccessListener(token->{
+                                              User user = new User(name,pass,email,auth.getCurrentUser().getUid(),status,Profile_Image,"Heyy i am using Mim",token);
+                                              reff.child(auth.getCurrentUser().getUid()).setValue(user)
+                                              .addOnSuccessListener((Void m)->{
                                               Intent move = new Intent(SIGNUP.this,LogIN.class);
                                               move.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                               startActivity(move);
                                               finish();
+                                              });
                                             });
                                         });
                                      });
@@ -108,6 +132,15 @@ public class SIGNUP extends AppCompatActivity {
             }
         }
         
+    void setup_Notification() {
+             compact =  new NotificationCompat.Builder(this, notificationchannels.CHANNEL)
+                        .setSmallIcon(R.drawable.image)
+                        .setOngoing(true)
+                        .setOnlyAlertOnce(true)
+                        .setContentTitle("Uploading Image")
+                        .setContentText("Wait for it to finsih")
+                        .setProgress(100, 0, false);
+    }
     
 }
 
