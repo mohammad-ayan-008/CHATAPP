@@ -7,10 +7,7 @@ MimChat is a chat application with features similar to WhatsApp, utilizing Fireb
 
 Here is a demo of the project:
 
-<video width="600" controls>
-  <source src="https://github.com/mohammad-ayan-008/CHATAPP/raw/main/8E458B4718189B106599C16DCC302E84_video_dashinit.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Watch the video demo](https://github.com/mohammad-ayan-008/CHATAPP/raw/main/8E458B4718189B106599C16DCC302E84_video_dashinit.mp4)
 
 
 
