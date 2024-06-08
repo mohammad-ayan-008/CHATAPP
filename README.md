@@ -1,7 +1,7 @@
 # MimChat
 
 MimChat is a chat application with features similar to WhatsApp, utilizing Firebase for backend services and Firestore for image storage. The application follows the MVVM (Model-View-ViewModel) design pattern for better code organization and maintainability.
-[![Video Title](https://github.com/mohammad-ayan-008/CHATAPP/blob/main/Screenshot_2024-06-09-02-12-43-637_com.android.chrome-edit.jpg)]([https://www.youtube.com/watch?v=VIDEO_ID](https://github.com/mohammad-ayan-008/CHATAPP/blob/main/8E458B4718189B106599C16DCC302E84_video_dashinit.mp4))
+[![Video Title](https://github.com/mohammad-ayan-008/CHATAPP/blob/main/Screenshot_2024-06-09-02-12-43-637_com.android.chrome-edit.jpg)]((https://github.com/mohammad-ayan-008/CHATAPP/blob/main/8E458B4718189B106599C16DCC302E84_video_dashinit.mp4))
 
 
 
